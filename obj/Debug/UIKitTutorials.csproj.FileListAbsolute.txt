@@ -1,0 +1,103 @@
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\bin\Debug\UIKitTutorials.exe.config
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\bin\Debug\UIKitTutorials.exe
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\bin\Debug\UIKitTutorials.pdb
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.csprojAssemblyReference.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\MainWindow.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\App.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials_MarkupCompile.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials_MarkupCompile.lref
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\MainWindow.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.g.resources
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.Properties.Resources.resources
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.exe
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\UIKitTutorials.pdb
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\App.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Assets\Icons\Icons.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Themes\LightTheme.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\HomePage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\HomePage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\NotesPage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\PaymentPage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\SoundsPage.g.cs
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\NotesPage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\PaymentPage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Pages\SoundsPage.baml
+C:\Users\JEYDERHT\Desktop\C# - Professional\WPF - YouTube\UIKitTutorials\obj\Debug\Styles\MainStyle.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\UIKitTutorials.exe.config
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\UIKitTutorials.exe
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\UIKitTutorials.pdb
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\MainWindow.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\HomePage.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\NotesPage.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\PaymentPage.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\SoundsPage.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\App.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials_MarkupCompile.cache
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials_MarkupCompile.lref
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\App.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Assets\Icons\Icons.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\MainWindow.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\HomePage.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\NotesPage.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\PaymentPage.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Pages\SoundsPage.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Styles\MainStyle.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\Themes\LightTheme.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.g.resources
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.Properties.Resources.resources
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.exe
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.pdb
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\MaterialDesignColors.dll
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\MaterialDesignColors.pdb
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\LoginScreen.g.cs
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\LoginScreen.baml
+C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\UIKitTutorials.csproj.CopyComplete
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\HandyControl.dll
+C:\Users\dengr\Desktop\UIKitTutorials-main\bin\Debug\HandyControl.xml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\UIKitTutorials.exe.config
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\UIKitTutorials.exe
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\UIKitTutorials.pdb
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\HandyControl.dll
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\MaterialDesignColors.dll
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\HandyControl.xml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\MaterialDesignColors.pdb
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\LoginScreen.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\MainWindow.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\HomePage.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\NotesPage.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\PaymentPage.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\SoundsPage.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\App.g.cs
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials_MarkupCompile.cache
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials_MarkupCompile.lref
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\App.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Assets\Icons\Icons.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\LoginScreen.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\MainWindow.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\HomePage.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\NotesPage.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\PaymentPage.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Pages\SoundsPage.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Styles\MainStyle.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\Themes\LightTheme.baml
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.g.resources
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.Properties.Resources.resources
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.csproj.CopyComplete
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.exe
+C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.pdb
