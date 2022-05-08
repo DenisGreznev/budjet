@@ -101,3 +101,41 @@ C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTu
 C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.csproj.CopyComplete
 C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.exe
 C:\Users\dengr\Desktop\ПРЕДДИПЛОМНЫЙ ПРОЕКТ\obj\Debug\UIKitTutorials.pdb
+C:\Users\denis\Source\Repos\budjet\bin\Debug\UIKitTutorials.exe.config
+C:\Users\denis\Source\Repos\budjet\bin\Debug\UIKitTutorials.exe
+C:\Users\denis\Source\Repos\budjet\bin\Debug\UIKitTutorials.pdb
+C:\Users\denis\Source\Repos\budjet\bin\Debug\HandyControl.dll
+C:\Users\denis\Source\Repos\budjet\bin\Debug\MaterialDesignColors.dll
+C:\Users\denis\Source\Repos\budjet\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\denis\Source\Repos\budjet\bin\Debug\HandyControl.xml
+C:\Users\denis\Source\Repos\budjet\bin\Debug\MaterialDesignColors.pdb
+C:\Users\denis\Source\Repos\budjet\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\denis\Source\Repos\budjet\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.AssemblyReference.cache
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
+C:\Users\denis\Source\Repos\budjet\obj\Debug\LoginScreen.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\MainWindow.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\HomePage.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\NotesPage.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\PaymentPage.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\SoundsPage.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\App.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials_MarkupCompile.cache
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials_MarkupCompile.lref
+C:\Users\denis\Source\Repos\budjet\obj\Debug\App.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Assets\Icons\Icons.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\LoginScreen.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\MainWindow.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\HomePage.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\NotesPage.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\PaymentPage.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\SoundsPage.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Styles\MainStyle.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Themes\LightTheme.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.g.resources
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.Properties.Resources.resources
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.GenerateResource.cache
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.CoreCompileInputs.cache
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.CopyComplete
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.exe
+C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.pdb

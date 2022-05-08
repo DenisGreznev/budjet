@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dengr\Desktop\UIKitTutorials-main\obj\Debug\
+C:\Users\denis\Source\Repos\budjet\obj\Debug\
 UIKitTutorials
 none
 false
 DEBUG;TRACE
-C:\Users\dengr\Desktop\UIKitTutorials-main\App.xaml
+C:\Users\denis\Source\Repos\budjet\App.xaml
 9-1288838598
 
-11-504602337
-16-569462769
+12334679396
+16-1339751901
 Assets\Icons\Icons.xaml;LoginScreen.xaml;MainWindow.xaml;Pages\HomePage.xaml;Pages\NotesPage.xaml;Pages\PaymentPage.xaml;Pages\SoundsPage.xaml;Styles\MainStyle.xaml;Themes\LightTheme.xaml;
 
-False
+True
 

@@ -34,7 +34,11 @@ namespace UIKitTutorials
         private void btnRestore_Click(object sender, RoutedEventArgs e)
         {
             if (WindowState == WindowState.Normal)
+            {
                 WindowState = WindowState.Maximized;
+                
+            }
+                
             else
                 WindowState = WindowState.Normal;
         }
@@ -85,6 +89,19 @@ namespace UIKitTutorials
         {
             btnMenu.IsChecked = true;
             PagesNavigation.Navigate(new System.Uri("Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void home_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите закрыть приложение?", "Выход", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

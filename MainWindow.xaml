@@ -8,7 +8,7 @@
         Title="MainWindow" Height="800" Width="1200"
         WindowStartupLocation="CenterScreen" WindowStyle="None"
         Background="Transparent" AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip" WindowState="Normal" Loaded="home_Loaded_1">
+        ResizeMode="CanResizeWithGrip" WindowState="Normal" Loaded="home_Loaded_1" Closing="home_Closing">
     <Border CornerRadius="8" Background="{DynamicResource PrimaryBackgroundColor}">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -17,7 +17,7 @@
             </Grid.ColumnDefinitions>
             <!-- Start: GridColum Left-->
             <Border CornerRadius="8 0 0 8" Background="{DynamicResource SecundaryBackgroundColor}">
-                <Grid x:Name="gridMenu" Width="55">
+                <Grid x:Name="gridMenu" Width="200">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="80"/>
@@ -51,7 +51,7 @@
                     </ToggleButton>
 
                     <StackPanel Grid.Row="3">
-                        <RadioButton x:Name="rdHome" IsChecked="True" Content="Главная" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click"/>
+                        <RadioButton x:Name="rdHome" IsChecked="True" Content="Главная"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click"/>
                         <RadioButton x:Name="rdSounds" Content="Средства" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdSounds_Click"/>
                         <RadioButton x:Name="rdNotes" Content="Освоение" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
                         <RadioButton x:Name="rdPayment" Content="Программы" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPayment_Click"/>

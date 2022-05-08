@@ -6,18 +6,19 @@
       xmlns:local="clr-namespace:UIKitTutorials.Pages"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800" Background="{DynamicResource SecundaryBackgroundColor}"
-      Title="SoundsPage">
+      d:DesignHeight="509" d:DesignWidth="1027.5" Background="{DynamicResource SecundaryBackgroundColor}"
+      Title="SoundsPage" GotFocus="Page_GotFocus">
 
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="33*"/>
-            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="357*"/>
+            <ColumnDefinition Width="671*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="7"/>
-            <RowDefinition Height="246"/>
+            <RowDefinition Height="340"/>
+
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0"  Grid.ColumnSpan="2">
@@ -26,22 +27,66 @@
             <TextBlock Visibility="Hidden" Foreground="Black" Margin="800,-65,0,0" x:Name="labelcena"  FontSize="18" Height="30" Width="64"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="143,105,504,-30" Grid.ColumnSpan="2">
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="170,105,1,13">
             <TextBox HorizontalContentAlignment="Center" x:Name="textboxid" Foreground="Black" HorizontalAlignment="Left" FontSize="16" Width="129" Margin="7" Height="25"/>
-            <ComboBox FontSize="16" HorizontalContentAlignment="Center" Visibility="Visible" HorizontalAlignment="Left" Foreground="Black" Name="comboboxprog" Width="142" Margin="7" />
+            <ComboBox FontSize="16" HorizontalContentAlignment="Center" Visibility="Visible" HorizontalAlignment="Left" Foreground="Black" Name="comboboxprog" Width="137" Margin="7" />
             <DatePicker HorizontalContentAlignment="Center"  x:Name="textboxdate" HorizontalAlignment="Left" Foreground="Black" FontSize="16" Width="132" Margin="7"/>
             <TextBox HorizontalContentAlignment="Center" x:Name="textboxsum" HorizontalAlignment="Left" Foreground="Black" FontSize="16" Width="129" Margin="7" Height="26"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="1" Margin="48,10,27,-74">
-            <DataGrid Background="WhiteSmoke" x:Name="datagrid" Height="308" Width="450" Loaded="datagrid_Loaded" IsReadOnly="True" SelectionChanged="datagrid_SelectionChanged">
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="48,28,80,0" Height="328" VerticalAlignment="Top">
+            <DataGrid Background="LightGray" x:Name="datagrid" Height="318" Width="457" Loaded="datagrid_Loaded" IsReadOnly="True" SelectionChanged="datagrid_SelectionChanged">
             </DataGrid>
         </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="10,105,126,-29">
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="29,105,144,62">
             <TextBlock Text="Номер" FontWeight="Bold" Margin="9" FontSize="18"/>
             <TextBlock Text="Программа" FontWeight="Bold" Margin="9" FontSize="18"/>
             <TextBlock Text="Дата выдачи" FontWeight="Bold" Margin="9" FontSize="18"/>
             <TextBlock Text="Сумма" FontWeight="Bold" Margin="9" FontSize="18" />
         </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="29,317,23,-16">
+            <Button HorizontalAlignment="Left" x:Name="buttondob"  Content="Добавить" Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                         Width="127" Height="35" Click="buttondob_Click"   />
+
+            <Button x:Name="buttonred"  Content="Редактировать" Margin="10,0,0,0" Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                         Width="135" Height="35" Click="buttonred_Click"   />
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1" Margin="29,365,102,-107">
+            <Button HorizontalAlignment="Left" x:Name="buttonobn"  Content="Обновить \ Сохранить" Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                         Width="184" Height="35" Click="buttonobn_Click"   />
+
+            <Button x:Name="buttonclear"  Content="Очистить поля" Margin="0,10,0,0" HorizontalAlignment="Left"  Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                         Width="135" Height="35" Click="buttonclear_Click"   />
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="29,452,121,-156">
+            <Button x:Name="buttondel"  Content="Удалить запись" Foreground="Black" Background="Red"  Style="{StaticResource MaterialDesignFlatLightBgButton}" 
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                         Width="155" Height="36" Click="buttonobn_Click"   />
+
+
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="31,356,42,-62" Grid.Column="1">
+            <Label Content="Поиск по программе " FontWeight="Bold" Margin="5" FontSize="18" Width="195"/>
+            <TextBox Margin="0,-5,0,0" FontSize="18" HorizontalContentAlignment="Center" Visibility="Visible"  Foreground="Black" x:Name="textboxtovarpoisk" Width="175" Height="34"  />
+            <Button x:Name="buttonpoisk" Margin="20,2,0,0" Content="Поиск" Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                          Width="75" Height="35" Click="buttonpoisk_Click"   />
+            <Button x:Name="buttonsbros" Margin="10,2,0,0" Content="Сброс" Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}"  
+                         materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
+                          Width="75" Height="36"  Click="buttonsbros_Click"  />
+        </StackPanel>
+
+
 
 
 

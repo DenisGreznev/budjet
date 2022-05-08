@@ -39,5 +39,41 @@ namespace UIKitTutorials.Pages
         {
 
         }
+
+        private void buttondob_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void buttonred_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonobn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonclear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonpoisk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonsbros_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_GotFocus(object sender, RoutedEventArgs e)
+        {
+            
+          
+        }
     }
 }
