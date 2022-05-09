@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace UIKitTutorials.Pages
 {
     /// <summary>
-    /// Lógica de interacción para PaymentPage.xaml
+    /// Логика взаимодействия для PunktPage.xaml
     /// </summary>
-    public partial class PaymentPage : Page
+    public partial class PunktPage : Page
     {
-        public PaymentPage()
+        public PunktPage()
         {
             InitializeComponent();
         }

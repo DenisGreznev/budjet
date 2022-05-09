@@ -77,7 +77,7 @@ namespace UIKitTutorials
 
         private void rdPunkt_Click(object sender, RoutedEventArgs e)
         {
-
+            PagesNavigation.Navigate(new System.Uri("Pages/PunktPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void rdOtch_Click(object sender, RoutedEventArgs e)

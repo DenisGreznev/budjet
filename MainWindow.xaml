@@ -51,12 +51,12 @@
                     </ToggleButton>
 
                     <StackPanel Grid.Row="3">
-                        <RadioButton x:Name="rdHome" IsChecked="True" Content="Главная"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click"/>
-                        <RadioButton x:Name="rdSounds" Content="Средства" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdSounds_Click"/>
-                        <RadioButton x:Name="rdNotes" Content="Освоение" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click"/>
-                        <RadioButton x:Name="rdPayment" Content="Программы" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPayment_Click"/>
-                        <RadioButton x:Name="rdPunkt" Content="Пункты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPunkt_Click"/>
-                        <RadioButton x:Name="rdOtch" Content="Отчеты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdOtch_Click"/>
+                        <RadioButton x:Name="rdHome" FontSize="18" IsChecked="True" Content="Главная"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click"/>
+                        <RadioButton x:Name="rdSounds" FontSize="18" Content="Средства" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdSounds_Click"/>
+                        <RadioButton x:Name="rdNotes" FontSize="18"  Content="Освоение" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click" Cursor="Hand"/>
+                        <RadioButton x:Name="rdPayment" FontSize="18" Content="Программы" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPayment_Click"/>
+                        <RadioButton x:Name="rdPunkt" FontSize="18" Content="Пункты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPunkt_Click"/>
+                        <RadioButton x:Name="rdOtch" FontSize="18" Content="Отчеты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdOtch_Click"/>
                     </StackPanel>
 
                     

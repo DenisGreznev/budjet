@@ -24,5 +24,55 @@ namespace UIKitTutorials.Pages
         {
             InitializeComponent();
         }
+        private void datagrid_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void buttonpod_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttondob_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonred_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonobn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonclear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonpoisk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonsbros_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+
+        }
     }
 }

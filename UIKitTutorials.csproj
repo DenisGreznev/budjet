@@ -102,6 +102,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PunktPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SoundsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +128,9 @@
     </Compile>
     <Compile Include="Pages\PaymentPage.xaml.cs">
       <DependentUpon>PaymentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PunktPage.xaml.cs">
+      <DependentUpon>PunktPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SoundsPage.xaml.cs">
       <DependentUpon>SoundsPage.xaml</DependentUpon>
