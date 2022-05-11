@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UIKitTutorials"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" Name="home"
-        Title="MainWindow" Height="800" Width="1200"
+        Title="MainWindow" Height="800" Width="1300"
         WindowStartupLocation="CenterScreen" WindowStyle="None"
         Background="Transparent" AllowsTransparency="True"
         ResizeMode="CanResizeWithGrip" WindowState="Normal" Loaded="home_Loaded_1" Closing="home_Closing">
@@ -52,11 +53,10 @@
 
                     <StackPanel Grid.Row="3">
                         <RadioButton x:Name="rdHome" FontSize="18" IsChecked="True" Content="Главная"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click"/>
-                        <RadioButton x:Name="rdSounds" FontSize="18" Content="Средства" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdSounds_Click"/>
-                        <RadioButton x:Name="rdNotes" FontSize="18"  Content="Освоение" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource notes}" Click="rdNotes_Click" Cursor="Hand"/>
-                        <RadioButton x:Name="rdPayment" FontSize="18" Content="Программы" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPayment_Click"/>
-                        <RadioButton x:Name="rdPunkt" FontSize="18" Content="Пункты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdPunkt_Click"/>
-                        <RadioButton x:Name="rdOtch" FontSize="18" Content="Отчеты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdOtch_Click"/>
+                        <RadioButton x:Name="rdSounds" FontSize="18" Content="Средства" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdSounds_Click" Cursor="Hand"/>
+                        <RadioButton x:Name="rdNotes" FontSize="18"  Content="Освоение" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource headphones}" Click="rdNotes_Click" Cursor="Hand"/>
+                        <RadioButton x:Name="rdPayment" FontSize="18" Content="Программы" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource billing}" Margin="0 5 0 5" Click="rdPayment_Click"/>
+                        <RadioButton x:Name="rdPunkt" FontSize="18" Content="Пункты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource supplier}" Margin="0 5 0 5" Click="rdPunkt_Click"/>
                     </StackPanel>
 
                     

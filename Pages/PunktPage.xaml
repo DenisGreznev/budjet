@@ -40,8 +40,8 @@
 
 
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.Row="1" Margin="16,28,80,0" Height="328" VerticalAlignment="Top">
-            <DataGrid Background="LightGray" x:Name="datagrid" Height="318" Width="531" Loaded="datagrid_Loaded" IsReadOnly="True" SelectionChanged="datagrid_SelectionChanged">
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="16,28,30,0" Height="328" VerticalAlignment="Top">
+            <DataGrid HorizontalAlignment="Left" Background="#f1f1f1" x:Name="datagrid" Height="318" Width="599" Loaded="datagrid_Loaded" IsReadOnly="True" SelectionChanged="datagrid_SelectionChanged">
             </DataGrid>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="29,105,188,-20">
@@ -78,7 +78,7 @@
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="1" Margin="29,508,121,-212">
             <Button x:Name="buttondel"  Content="Удалить запись" Foreground="Black" Background="Red"  Style="{StaticResource MaterialDesignFlatLightBgButton}" 
                          materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 
-                         Width="155" Height="36" Click="buttonobn_Click"   />
+                         Width="155" Height="36" Click="buttondel_Click_1" Cursor="Hand"   />
 
 
 

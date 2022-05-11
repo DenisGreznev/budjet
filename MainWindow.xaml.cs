@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UIKitTutorials.Pages;
+using MaterialDesignThemes.Wpf;
 
 namespace UIKitTutorials
 {
@@ -24,19 +25,34 @@ namespace UIKitTutorials
         public MainWindow()
         {
             InitializeComponent();
+            
+           
+           
         }
+
+            
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
+        private void Second_ButtonClicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("ButtonClicked");
+        }
+
         private void btnRestore_Click(object sender, RoutedEventArgs e)
         {
             if (WindowState == WindowState.Normal)
             {
+               
                 WindowState = WindowState.Maximized;
                 
+                
+
+
+
             }
                 
             else
@@ -89,6 +105,8 @@ namespace UIKitTutorials
         {
             btnMenu.IsChecked = true;
             PagesNavigation.Navigate(new System.Uri("Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
+           
+            
         }
 
         private void home_Closing(object sender, System.ComponentModel.CancelEventArgs e)

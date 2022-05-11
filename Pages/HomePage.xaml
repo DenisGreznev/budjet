@@ -4,11 +4,126 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:UIKitTutorials.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="HomePage">
+      d:DesignHeight="597.125" d:DesignWidth="1027.5" Background="{DynamicResource SecundaryBackgroundColor}"
+      Title="HomePage" Loaded="Page_Loaded">
 
-    <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
-       
-    </Border>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="515*"/>
+            <ColumnDefinition Width="513*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7"/>
+            <RowDefinition Height="340"/>
+
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="51,38,22,170" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="124" Width="366">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel>
+                        <TextBlock FontSize="22" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Всего выделено средств:" Width="300"/>
+
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock x:Name="allsred" FontSize="25" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                        <TextBlock FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text=" руб." />
+
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Margin="51,198,23,19" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="124" Width="366">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel>
+                        <TextBlock FontSize="22" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Всего освоено средств:" Width="300"/>
+
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock x:Name="allsred2" FontSize="25" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                        <TextBlock FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text=" руб." />
+                       
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Margin="51,356,23,-148" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="124" Width="366">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel>
+                        <TextBlock FontSize="22" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Остаточные средства:" Width="300"/>
+
+                    </StackPanel>
+                    <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock x:Name="allsred3" FontSize="25" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                        <TextBlock FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text=" руб." />
+
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Margin="492,38,10,63" Grid.Row="1" Grid.ColumnSpan="2">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="225" Width="477">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Height="40">
+                        <TextBlock FontSize="22" FontWeight="DemiBold" Margin="10,0,0,0" Text="С " Width="28" Height="30"/>
+                        <DatePicker Name="datepoisk" FontSize="17" Width="119" DataContextChanged="datepoisk_DataContextChanged" TextInput="datepoisk_TextInput" SelectedDateChanged="datepoisk_SelectedDateChanged" DisplayDate="2022-12-05"/>
+                        <TextBlock Text="было освоено средств: "  FontSize="22" FontWeight="DemiBold" Margin="10,0,0,0" Width="258" Height="30"/>
+
+
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Margin="10,0,0,0" x:Name="allsred4" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                        <TextBlock FontSize="21" HorizontalAlignment="Center" FontWeight="DemiBold"  Text=" руб." />
+
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Выполнено программ: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="allprog" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+
+
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0"  Text="В процессе освоения: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="allprog2" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+
+
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Не освоено программ: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="allprog3" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+
+
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+
 </Page>

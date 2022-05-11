@@ -104,7 +104,7 @@
 
 
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="10,28,80,0" Height="333" VerticalAlignment="Top">
-            <DataGrid Background="LightGray" x:Name="datagrid" Height="320" Width="532" Loaded="datagrid_Loaded" IsReadOnly="True" SelectionChanged="datagrid_SelectionChanged">
+            <DataGrid HorizontalAlignment="Left" Background="LightGray" x:Name="datagrid" Height="320" Width="557" Loaded="datagrid_Loaded" IsReadOnly="True" SelectionChanged="datagrid_SelectionChanged">
             </DataGrid>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="29,105,224,196">
