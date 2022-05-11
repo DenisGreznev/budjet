@@ -82,7 +82,7 @@ namespace UIKitTutorials
 
         private void rdOtch_Click(object sender, RoutedEventArgs e)
         {
-
+            PagesNavigation.Navigate(new System.Uri("Pages/OtchPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void home_Loaded_1(object sender, RoutedEventArgs e)

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,34 +16,17 @@ using System.Windows.Shapes;
 namespace UIKitTutorials.Pages
 {
     /// <summary>
-    /// Lógica de interacción para NotesPage.xaml
+    /// Логика взаимодействия для OtchPage.xaml
     /// </summary>
-    public partial class NotesPage : Page
+    public partial class OtchPage : Page
     {
-        public NotesPage()
+        public OtchPage()
         {
             InitializeComponent();
-            textboxdaten.SelectedDate = DateTime.Now;
         }
+
         private void datagrid_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                SqlConnection sqlCon = LocalDB.GetDBConnection();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM punkt", sqlCon);
-                DataTable dt = new DataTable();
-                sqlCon.Open();
-                SqlDataReader srd = cmd.ExecuteReader();
-                dt.Load(srd);
-                sqlCon.Close();
-                datagrid.ItemsSource = dt.DefaultView;
-
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
         }
 
@@ -93,6 +74,22 @@ namespace UIKitTutorials.Pages
         {
 
 
+        }
+
+        private void buttonaccept_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SredItem_Selected(object sender, RoutedEventArgs e)
+        {
+            PanelSred.Visibility = Visibility.Visible;
+        }
+
+        private void buttoncleardate_Click(object sender, RoutedEventArgs e)
+        {
+            textboxdate1.Text = "";
+            textboxdate2.Text = "";
         }
     }
 }

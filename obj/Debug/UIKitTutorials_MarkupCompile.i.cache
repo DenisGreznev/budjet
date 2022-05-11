@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\denis\Source\Repos\budjet\App.xaml
-101531281447
+11-2097954032
 
-13-597143153
+15-1170424846
 16-1339751901
-Assets\Icons\Icons.xaml;LoginScreen.xaml;MainWindow.xaml;Pages\HomePage.xaml;Pages\NotesPage.xaml;Pages\PaymentPage.xaml;Pages\PunktPage.xaml;Pages\SoundsPage.xaml;Styles\MainStyle.xaml;Themes\LightTheme.xaml;
+Assets\Icons\Icons.xaml;LoginScreen.xaml;MainWindow.xaml;Pages\HomePage.xaml;Pages\NotesPage.xaml;Pages\OtchPage.xaml;Pages\PaymentPage.xaml;Pages\PunktPage.xaml;Pages\SoundsPage.xaml;Styles\MainStyle.xaml;Themes\LightTheme.xaml;
 
-True
+False
 

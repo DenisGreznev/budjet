@@ -141,3 +141,5 @@ C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.exe
 C:\Users\denis\Source\Repos\budjet\obj\Debug\UIKitTutorials.pdb
 C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\PunktPage.g.cs
 C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\PunktPage.baml
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\OtchPage.g.cs
+C:\Users\denis\Source\Repos\budjet\obj\Debug\Pages\OtchPage.baml
