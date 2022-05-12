@@ -6,8 +6,8 @@
       xmlns:local="clr-namespace:UIKitTutorials.Pages"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="597.125" d:DesignWidth="1027.5" Background="{DynamicResource SecundaryBackgroundColor}"
-      Title="HomePage" Loaded="Page_Loaded">
+      d:DesignHeight="675.422" Background="{DynamicResource SecundaryBackgroundColor}"
+      Title="HomePage" Loaded="Page_Loaded" Width="1071">
 
 
     <Grid>
@@ -21,8 +21,8 @@
 
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="51,38,22,170" Grid.Row="1">
-            <Border Background="#f1f1f1"  CornerRadius="12" Height="124" Width="366">
+        <StackPanel Margin="49,38,24,204" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="90" Width="366">
                 <StackPanel Orientation="Vertical">
                     <StackPanel>
                         <TextBlock FontSize="22" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Всего выделено средств:" Width="300"/>
@@ -38,8 +38,8 @@
             </Border>
         </StackPanel>
 
-        <StackPanel Margin="51,198,23,19" Grid.Row="1">
-            <Border Background="#f1f1f1"  CornerRadius="12" Height="124" Width="366">
+        <StackPanel Margin="51,141,23,101" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="95" Width="366">
                 <StackPanel Orientation="Vertical">
                     <StackPanel>
                         <TextBlock FontSize="22" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Всего освоено средств:" Width="300"/>
@@ -48,15 +48,15 @@
                     <StackPanel Margin="0,20,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
                         <TextBlock x:Name="allsred2" FontSize="25" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
                         <TextBlock FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text=" руб." />
-                       
+
                     </StackPanel>
 
                 </StackPanel>
             </Border>
         </StackPanel>
 
-        <StackPanel Margin="51,356,23,-148" Grid.Row="1">
-            <Border Background="#f1f1f1"  CornerRadius="12" Height="124" Width="366">
+        <StackPanel Margin="51,252,23,-11" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="94" Width="366">
                 <StackPanel Orientation="Vertical">
                     <StackPanel>
                         <TextBlock FontSize="22" HorizontalAlignment="Left" FontWeight="DemiBold" Margin="10,0,0,0" Text="Остаточные средства:" Width="300"/>
@@ -72,14 +72,95 @@
             </Border>
         </StackPanel>
 
-        <StackPanel Margin="492,38,10,63" Grid.Row="1" Grid.ColumnSpan="2">
-            <Border Background="#f1f1f1"  CornerRadius="12" Height="225" Width="477">
+        <StackPanel Margin="514,351,-12,-313" Grid.Row="1" Grid.ColumnSpan="2">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="292" Width="478">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock FontSize="21" HorizontalAlignment="Center" FontWeight="DemiBold"  Margin="10,10,0,0" Text="Услуги " />
+                    <Separator/>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Выделено средств: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="auslugi" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Освоено средств: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="auslugi2" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Всего услуг: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="auslugi3" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="В процессе: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="auslugi4" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Освоено: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="auslugi5" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Не освоено: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="auslugi6" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                </StackPanel>
+
+
+            </Border>
+        </StackPanel>
+
+        <StackPanel Margin="513,19,-11,19" Grid.Row="1" Grid.ColumnSpan="2">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="292" Width="478">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock FontSize="21" HorizontalAlignment="Center" FontWeight="DemiBold"  Margin="10,10,0,0" Text="Программы " />
+                    <Separator/>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Выделено средств: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="aprog" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Освоено средств: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="aprog2" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Всего программ: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="aprog3" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="В процессе: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="aprog4" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Освоено: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="aprog5" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Не освоено: " />
+                        <TextBlock Margin="10,0,0,0" x:Name="aprog6" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Margin="10,391,1,-283" Grid.Row="1">
+            <Border Background="#f1f1f1"  CornerRadius="12" Height="224" Width="477">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal" Height="40">
                         <TextBlock FontSize="22" FontWeight="DemiBold" Margin="10,0,0,0" Text="С " Width="28" Height="30"/>
                         <DatePicker Name="datepoisk" FontSize="17" Width="119" DataContextChanged="datepoisk_DataContextChanged" TextInput="datepoisk_TextInput" SelectedDateChanged="datepoisk_SelectedDateChanged" DisplayDate="2022-12-05"/>
                         <TextBlock Text="было освоено средств: "  FontSize="22" FontWeight="DemiBold" Margin="10,0,0,0" Width="258" Height="30"/>
-
 
                     </StackPanel>
                     <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
@@ -105,6 +186,13 @@
                     <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
                         <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text="Не освоено программ: " />
                         <TextBlock Margin="10,0,0,0" x:Name="allprog3" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
+
+
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+                        <TextBlock FontSize="21" HorizontalAlignment="Left" FontWeight="DemiBold"  Margin="10,0,0,0" Text=" " />
+                        <TextBlock Margin="10,0,0,0" x:Name="allprog4" FontSize="23" HorizontalAlignment="Center" FontWeight="DemiBold"  Text="" />
 
 
                     </StackPanel>

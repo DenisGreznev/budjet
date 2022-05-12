@@ -103,6 +103,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\OsvoenUslugPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\OtchPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -116,6 +120,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SoundsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UslugiPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\VidUslugiPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,6 +147,9 @@
     <Compile Include="Pages\NotesPage.xaml.cs">
       <DependentUpon>NotesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\OsvoenUslugPage.xaml.cs">
+      <DependentUpon>OsvoenUslugPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\OtchPage.xaml.cs">
       <DependentUpon>OtchPage.xaml</DependentUpon>
     </Compile>
@@ -146,6 +161,12 @@
     </Compile>
     <Compile Include="Pages\SoundsPage.xaml.cs">
       <DependentUpon>SoundsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UslugiPage.xaml.cs">
+      <DependentUpon>UslugiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VidUslugiPage.xaml.cs">
+      <DependentUpon>VidUslugiPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -194,6 +215,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Avatars\avatar-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="my-computer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

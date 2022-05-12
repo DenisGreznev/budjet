@@ -185,3 +185,9 @@ C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.CoreCompileIn
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.CopyComplete
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials.exe
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials.pdb
+C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\OsvoenUslugPage.g.cs
+C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\OsvoenUslugPage.baml
+C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\VidUslugiPage.g.cs
+C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\VidUslugiPage.baml
+C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\UslugiPage.g.cs
+C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\UslugiPage.baml

@@ -8,11 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("create_account.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-chat-message-48.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("login.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("login_in.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uservox_create_account.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uservox_login_in.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("my-computer.png")]
 
 

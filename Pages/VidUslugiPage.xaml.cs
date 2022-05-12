@@ -18,11 +18,11 @@ using System.Windows.Shapes;
 namespace UIKitTutorials.Pages
 {
     /// <summary>
-    /// Lógica de interacción para SoundsPage.xaml
+    /// Логика взаимодействия для VidUslugiPage.xaml
     /// </summary>
-    public partial class SoundsPage : Page
+    public partial class VidUslugiPage : Page
     {
-        public SoundsPage()
+        public VidUslugiPage()
         {
             InitializeComponent();
             fill_combo();
@@ -32,7 +32,7 @@ namespace UIKitTutorials.Pages
         private void datagrid_Loaded(object sender, RoutedEventArgs e)
         {
             datagrid.Columns[0].Header = "ID";
-            datagrid.Columns[1].Header = "Программа";
+            datagrid.Columns[1].Header = "Услуга";
             datagrid.Columns[2].Header = "Дата начисления";
             datagrid.Columns[3].Header = "Сумма";
         }
@@ -43,7 +43,7 @@ namespace UIKitTutorials.Pages
             try
             {
                 sqlCon.Open();
-                SqlCommand cmd = new SqlCommand("SELECT id_prog FROM program WHERE name = @name", sqlCon);
+                SqlCommand cmd = new SqlCommand("SELECT id_uslugi FROM uslugi WHERE name = @name", sqlCon);
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.AddWithValue("@name", comboboxprog.Text);
                 string id = Convert.ToString(cmd.ExecuteScalar());
@@ -62,7 +62,7 @@ namespace UIKitTutorials.Pages
             try
             {
                 SqlConnection sqlCon = LocalDB.GetDBConnection();
-                SqlCommand cmd = new SqlCommand("SELECT videlenie.id_vid, program.name, videlenie.datav, videlenie.summa FROM videlenie, program WHERE program.id_prog=videlenie.id_prog;", sqlCon);
+                SqlCommand cmd = new SqlCommand("SELECT viduslug.id_vidusl, uslugi.name, viduslug.datav, viduslug.summa FROM viduslug, uslugi WHERE uslugi.id_uslugi=viduslug.id_uslugi;", sqlCon);
                 DataTable dt = new DataTable();
                 sqlCon.Open();
                 SqlDataReader srd = cmd.ExecuteReader();
@@ -84,7 +84,7 @@ namespace UIKitTutorials.Pages
             try
             {
                 sqlCon.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM program", sqlCon);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM uslugi", sqlCon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -107,7 +107,7 @@ namespace UIKitTutorials.Pages
             if (dr != null)
             {
                 buttonred.IsEnabled = true;
-                textboxid.Text = dr["id_vid"].ToString();
+                textboxid.Text = dr["id_vidusl"].ToString();
                 comboboxprog.Text = dr["name"].ToString();
                 textboxdate.Text = dr["datav"].ToString();
                 textboxsum.Text = dr["summa"].ToString();
@@ -120,7 +120,7 @@ namespace UIKitTutorials.Pages
             else buttonred.IsEnabled = false;
         }
 
-       
+
 
         private void buttondob_Click(object sender, RoutedEventArgs e)
         {
@@ -133,9 +133,9 @@ namespace UIKitTutorials.Pages
                     {
                         SqlConnection sqlCon = LocalDB.GetDBConnection();
                         sqlCon.Open();
-                        SqlCommand cmdKl = new SqlCommand("INSERT INTO videlenie VALUES (@id_prog, @datav, @summa)", sqlCon);
+                        SqlCommand cmdKl = new SqlCommand("INSERT INTO viduslug VALUES (@id_uslugi, @datav, @summa)", sqlCon);
                         cmdKl.CommandType = CommandType.Text;
-                        cmdKl.Parameters.AddWithValue("@id_prog", labelid.Text);
+                        cmdKl.Parameters.AddWithValue("@id_uslugi", labelid.Text);
                         cmdKl.Parameters.AddWithValue("@datav", textboxdate.Text);
                         cmdKl.Parameters.AddWithValue("@summa", textboxsum.Text);
                         cmdKl.ExecuteNonQuery();
@@ -145,7 +145,7 @@ namespace UIKitTutorials.Pages
                         textboxsum.Text = "";
                         sqlCon.Close();
                         LoadGrid();
-                        
+
                     }
                 }
             }
@@ -157,53 +157,42 @@ namespace UIKitTutorials.Pages
 
         private void buttonred_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (datagrid.SelectedCells.Count > 0)
             {
-                if (datagrid.SelectedCells.Count > 0)
+                DataRowView row = (DataRowView)datagrid.SelectedItems[0];
+                int id = (int)row["id_vidusl"];
+                try
                 {
-                    DataRowView row = (DataRowView)datagrid.SelectedItems[0];
-                    int id = (int)row["id_vid"];
-                    try
-                    {
-                        SqlConnection sqlCon = LocalDB.GetDBConnection();
-                        SqlCommand cmd = new SqlCommand("UPDATE videlenie SET id_prog='" + labelid.Text + "', datav='" + textboxdate.Text + "', summa='" + textboxsum.Text + "' WHERE id_vid=" + id + ";", sqlCon);
-                        sqlCon.Open();
-                        cmd.ExecuteNonQuery();
+                    SqlConnection sqlCon = LocalDB.GetDBConnection();
+                    SqlCommand cmd = new SqlCommand("UPDATE viduslugi SET id_uslugi='" + labelid.Text + "', datav='" + textboxdate.Text + "', summa='" + textboxsum.Text + "' WHERE id_vidusl=" + id + ";", sqlCon);
+                    sqlCon.Open();
+                    cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Запись успешно обновлена", "Обновление", MessageBoxButton.OK, MessageBoxImage.Information);
-                        sqlCon.Close();
-                        LoadGrid();
-                        textboxid.Clear();
-                        comboboxprog.Text = "";
-                        textboxdate.Text = "";
-                        textboxsum.Text = "";
-                        datagrid.SelectedIndex = -1;
-                        datagrid.Columns[0].Header = "ID";
-                        datagrid.Columns[1].Header = "Программа";
-                        datagrid.Columns[2].Header = "Дата начисления";
-                        datagrid.Columns[3].Header = "Сумма";
+                    MessageBox.Show("Запись успешно обновлена", "Обновление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    sqlCon.Close();
+                    LoadGrid();
+                    textboxid.Clear();
+                    comboboxprog.Text = "";
+                    textboxdate.Text = "";
+                    textboxsum.Text = "";
+                    datagrid.SelectedIndex = -1;
 
 
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
                 }
-                else MessageBox.Show("Чтобы редактировать запись, нужно выбрать ее в таблице", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-           
+            else MessageBox.Show("Чтобы редактировать запись, нужно выбрать ее в таблице", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void buttonobn_Click(object sender, RoutedEventArgs e)
         {
             LoadGrid();
             datagrid.Columns[0].Header = "ID";
-            datagrid.Columns[1].Header = "Программа";
+            datagrid.Columns[1].Header = "Услуга";
             datagrid.Columns[2].Header = "Дата начисления";
             datagrid.Columns[3].Header = "Сумма";
         }
@@ -216,16 +205,16 @@ namespace UIKitTutorials.Pages
             textboxsum.Text = "";
             datagrid.SelectedIndex = -1;
             datagrid.Columns[0].Header = "ID";
-            datagrid.Columns[1].Header = "Программа";
+            datagrid.Columns[1].Header = "Услуга";
             datagrid.Columns[2].Header = "Дата начисления";
             datagrid.Columns[3].Header = "Сумма";
-            
+
         }
         private void buttonpoisk_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection sqlCon = LocalDB.GetDBConnection();
             sqlCon.Open();
-            SqlCommand cmd = new SqlCommand("SELECT videlenie.id_vid, program.name, videlenie.datav, videlenie.summa FROM videlenie, program WHERE program.id_prog=videlenie.id_prog and program.name LIKE '%" + textboxpoisk.Text + "%'", sqlCon);
+            SqlCommand cmd = new SqlCommand("SELECT viduslug.id_vidusl, uslugi.name, viduslug.datav, viduslug.summa FROM viduslug, uslugi WHERE uslugi.id_uslugi=viduslugi.id_uslugi and uslugi.name LIKE '%" + textboxpoisk.Text + "%'", sqlCon);
             cmd.CommandType = System.Data.CommandType.Text;
             DataTable dt = new DataTable();
             SqlDataReader srd = cmd.ExecuteReader();
@@ -233,7 +222,7 @@ namespace UIKitTutorials.Pages
             sqlCon.Close();
             datagrid.ItemsSource = dt.DefaultView;
             datagrid.Columns[0].Header = "ID";
-            datagrid.Columns[1].Header = "Программа";
+            datagrid.Columns[1].Header = "Услуга";
             datagrid.Columns[2].Header = "Дата начисления";
             datagrid.Columns[3].Header = "Сумма";
         }
@@ -242,7 +231,7 @@ namespace UIKitTutorials.Pages
         {
             LoadGrid();
             datagrid.Columns[0].Header = "ID";
-            datagrid.Columns[1].Header = "Программа";
+            datagrid.Columns[1].Header = "Услуга";
             datagrid.Columns[2].Header = "Дата начисления";
             datagrid.Columns[3].Header = "Сумма";
             textboxpoisk.Clear();
@@ -258,7 +247,7 @@ namespace UIKitTutorials.Pages
         {
             LoadGrid();
             datagrid.Columns[0].Header = "ID";
-            datagrid.Columns[1].Header = "Программа";
+            datagrid.Columns[1].Header = "Услуга";
             datagrid.Columns[2].Header = "Дата начисления";
             datagrid.Columns[3].Header = "Сумма";
         }
@@ -268,14 +257,14 @@ namespace UIKitTutorials.Pages
             try
             {
                 SqlConnection sqlCon = LocalDB.GetDBConnection();
-                SqlCommand cmd = new SqlCommand("SELECT DISTINCT program.name, SUM(videlenie.summa) FROM videlenie, program WHERE program.id_prog=videlenie.id_prog GROUP BY program.name;", sqlCon);
+                SqlCommand cmd = new SqlCommand("SELECT DISTINCT uslugi.name, SUM(viduslug.summa) FROM viduslug, uslugi WHERE uslugi.id_uslugi=viduslug.id_uslugi GROUP BY uslugi.name;", sqlCon);
                 DataTable dt = new DataTable();
                 sqlCon.Open();
                 SqlDataReader srd = cmd.ExecuteReader();
                 dt.Load(srd);
                 sqlCon.Close();
                 datagrid.ItemsSource = dt.DefaultView;
-                datagrid.Columns[0].Header = "Программа"; 
+                datagrid.Columns[0].Header = "Услуга";
                 datagrid.Columns[1].Header = "Сумма";
 
 
@@ -291,12 +280,12 @@ namespace UIKitTutorials.Pages
             if (datagrid.SelectedCells.Count > 0)
             {
                 DataRowView row = (DataRowView)datagrid.SelectedItems[0];
-                int id = (int)row["id_vid"];
+                int id = (int)row["id_vidusl"];
 
                 try
                 {
                     SqlConnection sqlCon = LocalDB.GetDBConnection();
-                    SqlCommand cmd = new SqlCommand("DELETE FROM videlenie WHERE id_vid=" + id + ";", sqlCon);
+                    SqlCommand cmd = new SqlCommand("DELETE FROM viduslug WHERE id_vidusl=" + id + ";", sqlCon);
                     sqlCon.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Запись успешно удалена.", "Удаление", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -317,12 +306,14 @@ namespace UIKitTutorials.Pages
             }
             else MessageBox.Show("Чтобы удалить запись, нужно выбрать ее в таблице", "Внимание", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-
-        private void selectuslug_Selected(object sender, RoutedEventArgs e)
+        private void selectprog_Selected(object sender, RoutedEventArgs e)
         {
+           
+        }
 
-            ((MainWindow)System.Windows.Application.Current.MainWindow).PagesNavigation.Navigate(new System.Uri("Pages/VidUslugiPage.xaml", UriKind.RelativeOrAbsolute));
-
+        private void selectprog1_Selected(object sender, RoutedEventArgs e)
+        {
+            ((MainWindow)System.Windows.Application.Current.MainWindow).PagesNavigation.Navigate(new System.Uri("Pages/SoundsPage.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

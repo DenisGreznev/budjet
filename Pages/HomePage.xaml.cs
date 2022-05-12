@@ -33,13 +33,28 @@ namespace UIKitTutorials.Pages
             try
             {
                 sqlCon.Open();
-                SqlCommand cmd = new SqlCommand("SELECT SUM(summa) FROM videlenie", sqlCon);
+                SqlCommand cmd = new SqlCommand("SELECT SUM(viduslug.summa) FROM viduslug", sqlCon);
+                SqlCommand cmd22 = new SqlCommand("SELECT SUM(videlenie.summa) FROM videlenie", sqlCon);
                 string sum = Convert.ToString(cmd.ExecuteScalar());
-                allsred.Text = sum;
+                string sum22 = Convert.ToString(cmd22.ExecuteScalar());
 
-                SqlCommand cmd2 = new SqlCommand("SELECT SUM(rashod) FROM osvoen WHERE status='Освоен'", sqlCon);
-                string sum2 = Convert.ToString(cmd2.ExecuteScalar());
-                allsred2.Text = sum2;
+                int sum111 = Convert.ToInt32(sum);
+                int sum222 = Convert.ToInt32(sum22);
+                int allsum = sum111+ sum222;
+
+                allsred.Text = Convert.ToString(allsum);
+
+               
+                SqlCommand cmd33 = new SqlCommand("SELECT SUM(rashod) FROM osvoen", sqlCon);
+                SqlCommand cmd44 = new SqlCommand("SELECT SUM(rashod) FROM osvuslug", sqlCon);
+                string sum33 = Convert.ToString(cmd33.ExecuteScalar());
+                string sum44 = Convert.ToString(cmd44.ExecuteScalar());
+
+                int sum333 = Convert.ToInt32(sum33);
+                int sum444 = Convert.ToInt32(sum44);
+                int allsum2 = sum333 + sum444;
+
+                allsred2.Text = Convert.ToString(allsum2);
 
                 SqlCommand cmd3 = new SqlCommand("SELECT SUM(rashod) FROM osvoen WHERE status='Освоен' and datan>='"+datepoisk.Text+"';", sqlCon);
                 string sum3 = Convert.ToString(cmd3.ExecuteScalar());
@@ -56,6 +71,55 @@ namespace UIKitTutorials.Pages
                 SqlCommand cmd6 = new SqlCommand("SELECT COUNT(*) FROM osvoen WHERE status='Не освоено' and datan>='" + datepoisk.Text + "';", sqlCon);
                 string sum6 = Convert.ToString(cmd6.ExecuteScalar());
                 allprog3.Text = sum6;
+
+                SqlCommand cmd7 = new SqlCommand("SELECT SUM(summa) FROM viduslug;", sqlCon);
+                string sum7 = Convert.ToString(cmd7.ExecuteScalar());
+                auslugi.Text = sum7;
+
+                SqlCommand cmd8 = new SqlCommand("SELECT SUM(rashod) FROM osvuslug", sqlCon);
+                string sum8 = Convert.ToString(cmd8.ExecuteScalar());
+                auslugi2.Text = sum8;
+
+                SqlCommand cmd9 = new SqlCommand("SELECT COUNT(*) FROM uslugi", sqlCon);
+                string sum9 = Convert.ToString(cmd9.ExecuteScalar());
+                auslugi3.Text = sum9;
+
+                SqlCommand cmd10 = new SqlCommand("SELECT COUNT(*) FROM osvuslug WHERE status = 'В процессе' ", sqlCon);
+                string sum10 = Convert.ToString(cmd10.ExecuteScalar());
+                auslugi4.Text = sum10;
+
+                SqlCommand cmd11 = new SqlCommand("SELECT COUNT(*) FROM osvuslug WHERE status = 'Освоен' ", sqlCon);
+                string sum11 = Convert.ToString(cmd11.ExecuteScalar());
+                auslugi5.Text = sum11;
+
+                SqlCommand cmd12 = new SqlCommand("SELECT COUNT(*) FROM osvuslug WHERE status = 'Не освоен' ", sqlCon);
+                string sum12 = Convert.ToString(cmd12.ExecuteScalar());
+                auslugi6.Text = sum12;
+
+
+                SqlCommand cmd13 = new SqlCommand("SELECT SUM(summa) FROM videlenie;", sqlCon);
+                string sum13 = Convert.ToString(cmd13.ExecuteScalar());
+                aprog.Text = sum13;
+
+                SqlCommand cmd14 = new SqlCommand("SELECT SUM(rashod) FROM osvoen", sqlCon);
+                string sum14 = Convert.ToString(cmd14.ExecuteScalar());
+                aprog2.Text = sum14;
+
+                SqlCommand cmd15 = new SqlCommand("SELECT COUNT(*) FROM program", sqlCon);
+                string sum15 = Convert.ToString(cmd15.ExecuteScalar());
+                aprog3.Text = sum15;
+
+                SqlCommand cmd16 = new SqlCommand("SELECT COUNT(*) FROM osvoen WHERE status = 'В процессе' ", sqlCon);
+                string sum16 = Convert.ToString(cmd16.ExecuteScalar());
+                aprog4.Text = sum16;
+
+                SqlCommand cmd17 = new SqlCommand("SELECT COUNT(*) FROM osvoen WHERE status = 'Освоен' ", sqlCon);
+                string sum17 = Convert.ToString(cmd17.ExecuteScalar());
+                aprog5.Text = sum17;
+
+                SqlCommand cmd18 = new SqlCommand("SELECT COUNT(*) FROM osvoen WHERE status = 'Не освоен' ", sqlCon);
+                string sum18 = Convert.ToString(cmd18.ExecuteScalar());
+                aprog6.Text = sum18;
 
 
                 int all1 = Convert.ToInt32(allsred.Text);

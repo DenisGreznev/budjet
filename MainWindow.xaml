@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:UIKitTutorials"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" Name="home"
-        Title="MainWindow" Height="800" Width="1300"
+        Title="MainWindow" Height="800" Width="1358"
         WindowStartupLocation="CenterScreen" WindowStyle="None"
         Background="Transparent" AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip" WindowState="Normal" Loaded="home_Loaded_1" Closing="home_Closing">
+        ResizeMode="CanResizeWithGrip" WindowState="Normal" Loaded="home_Loaded_1" Closing="home_Closing" Icon="/my-computer.png">
     <Border CornerRadius="8" Background="{DynamicResource PrimaryBackgroundColor}">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -18,7 +18,7 @@
             </Grid.ColumnDefinitions>
             <!-- Start: GridColum Left-->
             <Border CornerRadius="8 0 0 8" Background="{DynamicResource SecundaryBackgroundColor}">
-                <Grid x:Name="gridMenu" Width="200">
+                <Grid x:Name="gridMenu" Width="250">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="80"/>
@@ -35,7 +35,7 @@
                             <EventTrigger RoutedEvent="ToggleButton.Unchecked">
                                 <BeginStoryboard>
                                     <Storyboard x:Name="HideStackPanel">
-                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="200" To="55" Duration="0:0:0.3">
+                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="250" To="55" Duration="0:0:0.3">
                                         </DoubleAnimation>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -43,7 +43,7 @@
                             <EventTrigger RoutedEvent="ToggleButton.Checked">
                                 <BeginStoryboard>
                                     <Storyboard x:Name="ShowStackPanel">
-                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="55" To="200" Duration="0:0:0.3">
+                                        <DoubleAnimation Storyboard.TargetName="gridMenu" Storyboard.TargetProperty="Width" BeginTime="0:0:0" From="55" To="250" Duration="0:0:0.3">
                                         </DoubleAnimation>
                                     </Storyboard>
                                 </BeginStoryboard>
@@ -54,8 +54,11 @@
                     <StackPanel Grid.Row="3">
                         <RadioButton x:Name="rdHome" FontSize="18" IsChecked="True" Content="Главная"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource home}" Click="rdHome_Click"/>
                         <RadioButton x:Name="rdSounds" FontSize="18" Content="Средства" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource payment}" Margin="0 5 0 5" Click="rdSounds_Click" Cursor="Hand"/>
-                        <RadioButton x:Name="rdNotes" FontSize="18"  Content="Освоение" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource headphones}" Click="rdNotes_Click" Cursor="Hand"/>
+                        <RadioButton x:Name="rdNotes" FontSize="18"  Content="Освоение программ"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource headphones}" Click="rdNotes_Click" Cursor="Hand"/>
+                        <RadioButton x:Name="rdUslug" FontSize="18"  Content="Освоение услуг"  Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource customers}" Click="rdUslug_Click" Cursor="Hand"/>
+
                         <RadioButton x:Name="rdPayment" FontSize="18" Content="Программы" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource billing}" Margin="0 5 0 5" Click="rdPayment_Click"/>
+                        <RadioButton x:Name="rdUslugi" FontSize="18" Content="Услуги" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource products}" Margin="0 5 0 5" Click="rdUslugi_Click"/>
                         <RadioButton x:Name="rdPunkt" FontSize="18" Content="Пункты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource supplier}" Margin="0 5 0 5" Click="rdPunkt_Click"/>
                     </StackPanel>
 

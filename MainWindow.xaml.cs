@@ -121,5 +121,15 @@ namespace UIKitTutorials
                 e.Cancel = true;
             }
         }
+
+        private void rdUslug_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new System.Uri("Pages/OsvoenUslugPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void rdUslugi_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new System.Uri("Pages/UslugiPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
