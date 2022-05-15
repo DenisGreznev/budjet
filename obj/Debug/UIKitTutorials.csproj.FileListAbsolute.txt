@@ -155,7 +155,6 @@ C:\Users\dengr\Source\Repos\budjet\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\dengr\Source\Repos\budjet\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.AssemblyReference.cache
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials.csproj.SuggestedBindingRedirects.cache
-C:\Users\dengr\Source\Repos\budjet\obj\Debug\LoginScreen.g.cs
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\MainWindow.g.cs
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\HomePage.g.cs
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\NotesPage.g.cs
@@ -168,7 +167,6 @@ C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials_MarkupCompile.cache
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\UIKitTutorials_MarkupCompile.lref
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\App.baml
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\Assets\Icons\Icons.baml
-C:\Users\dengr\Source\Repos\budjet\obj\Debug\LoginScreen.baml
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\MainWindow.baml
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\HomePage.baml
 C:\Users\dengr\Source\Repos\budjet\obj\Debug\Pages\NotesPage.baml
