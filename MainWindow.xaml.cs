@@ -131,5 +131,10 @@ namespace UIKitTutorials
         {
             PagesNavigation.Navigate(new System.Uri("Pages/UslugiPage.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

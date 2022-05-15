@@ -84,11 +84,11 @@ namespace UIKitTutorials.Pages
                     {
                         SqlConnection sqlCon = LocalDB.GetDBConnection();
                         sqlCon.Open();
-                        SqlCommand cmdKl = new SqlCommand("INSERT INTO program VALUES (@name, @opisanie)", sqlCon);
+                        SqlCommand cmdKl = new SqlCommand("INSERT INTO uslugi VALUES (@name, @opisanie)", sqlCon);
                         cmdKl.CommandType = CommandType.Text;
 
                         cmdKl.Parameters.AddWithValue("@name", textboxname.Text);
-                        cmdKl.Parameters.AddWithValue("@datan", textboxopis.Text);
+                        cmdKl.Parameters.AddWithValue("@opisanie", textboxopis.Text);
                       
 
                         cmdKl.ExecuteNonQuery();

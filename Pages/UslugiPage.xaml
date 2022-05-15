@@ -76,7 +76,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="16,347,48,-53" Grid.Column="1">
-            <Label Content="Поиск программы " FontWeight="Bold" Margin="5" FontSize="18" Width="175"/>
+            <Label Content="Поиск услуги" FontWeight="Bold" Margin="5" FontSize="18" Width="175"/>
             <TextBox Margin="0,-5,0,0" FontSize="18" HorizontalContentAlignment="Center" Visibility="Visible"  Foreground="Black" x:Name="textboxpoisk" Width="175" Height="34" Cursor="Arrow"  />
             <Button x:Name="buttonpoisk" Margin="20,2,0,0" Content="Поиск" Foreground="Black" Background="LightGray" Style="{StaticResource MaterialDesignFlatLightButton}" 
                          materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" 

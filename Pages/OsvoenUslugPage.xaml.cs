@@ -28,7 +28,9 @@ namespace UIKitTutorials.Pages
             textboxdaten.SelectedDate = DateTime.Now;
             fill_combo();
             LoadGrid();
-       
+            fill_combo2();
+
+
 
 
         }
@@ -37,11 +39,12 @@ namespace UIKitTutorials.Pages
         {
             datagrid.Columns[0].Header = "ID";
             datagrid.Columns[1].Header = "Статус";
-            datagrid.Columns[2].Header = "Дата начала";
-            datagrid.Columns[3].Header = "Услуга";
-            datagrid.Columns[4].Header = "Выделено";
-            datagrid.Columns[5].Header = "Израсходовано";
-            datagrid.Columns[6].Header = "Осталось";
+            datagrid.Columns[2].Header = "Пункт";
+            datagrid.Columns[3].Header = "Дата начала";
+            datagrid.Columns[4].Header = "Услуга";
+            datagrid.Columns[5].Header = "Выделено";
+            datagrid.Columns[6].Header = "Израсходовано";
+            datagrid.Columns[7].Header = "Осталось";
         }
 
         public void LoadGrid()
@@ -49,7 +52,7 @@ namespace UIKitTutorials.Pages
             try
             {
                 SqlConnection sqlCon = LocalDB.GetDBConnection();
-                SqlCommand cmd = new SqlCommand("SELECT osvuslug.id_osvusl, osvuslug.status, osvuslug.datan, uslugi.name, viduslug.summa, osvuslug.rashod, (viduslug.summa-osvuslug.rashod) AS [Осталось] FROM osvuslug, viduslug, uslugi WHERE uslugi.id_uslugi=viduslug.id_uslugi and viduslug.id_vidusl=osvuslug.id_vidusl;", sqlCon);
+                SqlCommand cmd = new SqlCommand("SELECT osvuslug.id_osvusl, osvuslug.status, punkt.name, osvuslug.datan, uslugi.name, viduslug.summa, osvuslug.rashod, (viduslug.summa-osvuslug.rashod) AS [Осталось] FROM osvuslug, viduslug, uslugi, punkt WHERE punkt.id_punkt=osvuslug.id_punkt and uslugi.id_uslugi=viduslug.id_uslugi and viduslug.id_vidusl=osvuslug.id_vidusl;", sqlCon);
                 DataTable dt = new DataTable();
                 sqlCon.Open();
                 SqlDataReader srd = cmd.ExecuteReader();
@@ -91,7 +94,33 @@ namespace UIKitTutorials.Pages
 
         }
 
-        
+        void fill_combo2()
+        {
+            SqlConnection sqlCon = LocalDB.GetDBConnection();
+            try
+            {
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM punkt", sqlCon);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    string name = dr.GetString(1);
+                    textboxpunkt.Items.Add(name);
+                }
+                dr.Close();
+
+                sqlCon.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
 
         void labelidadd()
         {
@@ -99,6 +128,13 @@ namespace UIKitTutorials.Pages
             try
             {
                 sqlCon.Open();
+
+               
+                SqlCommand cmd = new SqlCommand("SELECT id_punkt FROM punkt WHERE name = @name", sqlCon);
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.Parameters.AddWithValue("@name", textboxpunkt.Text);
+                string id = Convert.ToString(cmd.ExecuteScalar());
+                labelid1.Text = id;
 
                 SqlCommand cmd2 = new SqlCommand("SELECT id_vidusl FROM viduslug WHERE summa = @summa", sqlCon);
                 cmd2.CommandType = System.Data.CommandType.Text;
@@ -130,8 +166,9 @@ namespace UIKitTutorials.Pages
                 buttonred.IsEnabled = true;
                 textboxid.Text = dr["id_osvusl"].ToString();
                 textboxstatus.Text = dr["status"].ToString();
+                textboxpunkt.Text = dr["name"].ToString();
                 textboxdaten.Text = dr["datan"].ToString();
-                textboxuslug.Text = dr["name"].ToString();
+                textboxuslug.Text = dr["name1"].ToString();
                 textboxvid.Text = dr["summa"].ToString();
                 textboxrashod.Text = dr["rashod"].ToString();
                 textboxost.Text = dr["Осталось"].ToString();
@@ -147,32 +184,33 @@ namespace UIKitTutorials.Pages
         {
             try
             {
-                if (textboxstatus.Text == "" || textboxdaten.Text == "" || textboxuslug.Text == "" || textboxvid.Text == "" || textboxrashod.Text == "" || textboxost.Text == "") MessageBox.Show("Все поля должны быть заполнены", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
+                if (textboxstatus.Text == "" || textboxpunkt.Text == "" || textboxdaten.Text == "" ||  textboxuslug.Text == "" || textboxvid.Text == "" || textboxrashod.Text == "" || textboxost.Text == "") MessageBox.Show("Все поля должны быть заполнены", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
                 else
                 {
                     if (MessageBox.Show("Добавить новую запись?", "Подтверждение действия", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         SqlConnection sqlCon = LocalDB.GetDBConnection();
                         sqlCon.Open();
-                        SqlCommand cmdKl = new SqlCommand("INSERT INTO osvuslug VALUES (@status, @datan, @rashod, @id_vidusl)", sqlCon);
+                        SqlCommand cmdKl = new SqlCommand("INSERT INTO osvuslug VALUES (@status, @datan, @rashod, @id_vidusl, @id_punkt)", sqlCon);
                         cmdKl.CommandType = CommandType.Text;
 
                         cmdKl.Parameters.AddWithValue("@status", textboxstatus.Text);
                         cmdKl.Parameters.AddWithValue("@datan", textboxdaten.Text);
                         cmdKl.Parameters.AddWithValue("@rashod", textboxrashod.Text);
                         cmdKl.Parameters.AddWithValue("@id_vidusl", labelid2.Text);
-
+                        cmdKl.Parameters.AddWithValue("@id_punkt", labelid1.Text);
                         cmdKl.ExecuteNonQuery();
 
                         sqlCon.Close();
                         LoadGrid();
                         datagrid.Columns[0].Header = "ID";
                         datagrid.Columns[1].Header = "Статус";
-                        datagrid.Columns[2].Header = "Дата начала";
-                        datagrid.Columns[3].Header = "Услуга";
-                        datagrid.Columns[4].Header = "Выделено";
-                        datagrid.Columns[5].Header = "Израсходовано";
-                        datagrid.Columns[6].Header = "Осталось";
+                        datagrid.Columns[2].Header = "Пункт";
+                        datagrid.Columns[3].Header = "Дата начала";
+                        datagrid.Columns[4].Header = "Услуга";
+                        datagrid.Columns[5].Header = "Выделено";
+                        datagrid.Columns[6].Header = "Израсходовано";
+                        datagrid.Columns[7].Header = "Осталось";
 
 
                     }
@@ -194,7 +232,7 @@ namespace UIKitTutorials.Pages
                 {
                     SqlConnection sqlCon = LocalDB.GetDBConnection();
                     sqlCon.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE osvuslug SET status='" + textboxstatus.Text + "', datan='" + textboxdaten.Text + "', rashod='" + textboxrashod.Text + "', id_vidusl='" + labelid2.Text + "' WHERE id_osvuslug=" + id + ";", sqlCon);
+                    SqlCommand cmd = new SqlCommand("UPDATE osvuslug SET status='" + textboxstatus.Text + "',  datan='" + textboxdaten.Text + "', rashod='" + textboxrashod.Text + "', id_vidusl='" + labelid2.Text + "', id_punkt='" + labelid1.Text + "' WHERE id_osvuslug=" + id + ";", sqlCon);
 
                     cmd.ExecuteNonQuery();
 
@@ -204,6 +242,7 @@ namespace UIKitTutorials.Pages
                     textboxstatus.Text = "";
                     textboxdaten.Text = "";
                     textboxrashod.Text = "";
+                    textboxpunkt.Text = "";
                     textboxuslug.Text = "";
                     textboxvid.Text = "";
                     textboxost.Text = "";
@@ -211,11 +250,12 @@ namespace UIKitTutorials.Pages
                     datagrid.SelectedIndex = -1;
                     datagrid.Columns[0].Header = "ID";
                     datagrid.Columns[1].Header = "Статус";
-                    datagrid.Columns[2].Header = "Дата начала";
-                    datagrid.Columns[3].Header = "Услуга";
-                    datagrid.Columns[4].Header = "Выделено";
-                    datagrid.Columns[5].Header = "Израсходовано";
-                    datagrid.Columns[6].Header = "Осталось";
+                    datagrid.Columns[2].Header = "Пункт";
+                    datagrid.Columns[3].Header = "Дата начала";
+                    datagrid.Columns[4].Header = "Услуга";
+                    datagrid.Columns[5].Header = "Выделено";
+                    datagrid.Columns[6].Header = "Израсходовано";
+                    datagrid.Columns[7].Header = "Осталось";
                 }
                 catch (SqlException ex)
                 {
@@ -233,11 +273,12 @@ namespace UIKitTutorials.Pages
             datagrid.SelectedIndex = -1;
             datagrid.Columns[0].Header = "ID";
             datagrid.Columns[1].Header = "Статус";
-            datagrid.Columns[2].Header = "Дата начала";
-            datagrid.Columns[3].Header = "Услуга";
-            datagrid.Columns[4].Header = "Выделено";
-            datagrid.Columns[5].Header = "Израсходовано";
-            datagrid.Columns[6].Header = "Осталось";
+            datagrid.Columns[2].Header = "Пункт";
+            datagrid.Columns[3].Header = "Дата начала";
+            datagrid.Columns[4].Header = "Услуга";
+            datagrid.Columns[5].Header = "Выделено";
+            datagrid.Columns[6].Header = "Израсходовано";
+            datagrid.Columns[7].Header = "Осталось";
         }
 
         private void buttonclear_Click(object sender, RoutedEventArgs e)
@@ -247,24 +288,26 @@ namespace UIKitTutorials.Pages
             textboxstatus.SelectedIndex = 0;
             textboxuslug.Text = "";
             textboxvid.Text = "";
+            textboxpunkt.Text = "";
             textboxost.Text = "";
             textboxrashod.Text = "0";
             textboxid.Clear();
             datagrid.SelectedIndex = -1;
             datagrid.Columns[0].Header = "ID";
             datagrid.Columns[1].Header = "Статус";
-            datagrid.Columns[2].Header = "Дата начала";
-            datagrid.Columns[3].Header = "Услуга";
-            datagrid.Columns[4].Header = "Выделено";
-            datagrid.Columns[5].Header = "Израсходовано";
-            datagrid.Columns[6].Header = "Осталось";
+            datagrid.Columns[2].Header = "Пункт";
+            datagrid.Columns[3].Header = "Дата начала";
+            datagrid.Columns[4].Header = "Услуга";
+            datagrid.Columns[5].Header = "Выделено";
+            datagrid.Columns[6].Header = "Израсходовано";
+            datagrid.Columns[7].Header = "Осталось";
         }
 
         private void buttonpoisk_Click(object sender, RoutedEventArgs e)
         {
             SqlConnection sqlCon = LocalDB.GetDBConnection();
             sqlCon.Open();
-            SqlCommand cmd = new SqlCommand("SELECT osvuslug.id_osvusl, osvuslug.status, osvuslug.datan, uslugi.name, viduslug.summa, osvuslug.rashod, (viduslug.summa-osvuslug.rashod) AS [Осталось] FROM osvuslug, viduslug, uslugi WHERE uslugi.id_uslugi=viduslug.id_uslugi and viduslug.id_vidusl=osvuslug.id_vidusl and osvuslug.status LIKE '%" + textboxstatuspoisk.Text + "%'", sqlCon);
+            SqlCommand cmd = new SqlCommand("SELECT osvuslug.id_osvusl, osvuslug.status, punkt.name, osvuslug.datan, uslugi.name, viduslug.summa, osvuslug.rashod, (viduslug.summa-osvuslug.rashod) AS [Осталось] FROM osvuslug, viduslug, uslugi, punkt WHERE punkt.id_punkt=osvuslug.id_punkt and uslugi.id_uslugi=viduslug.id_uslugi and viduslug.id_vidusl=osvuslug.id_vidusl and osvuslug.status LIKE '%" + textboxstatuspoisk.Text + "%'", sqlCon);
             cmd.CommandType = System.Data.CommandType.Text;
             DataTable dt = new DataTable();
             SqlDataReader srd = cmd.ExecuteReader();
@@ -273,11 +316,12 @@ namespace UIKitTutorials.Pages
             datagrid.ItemsSource = dt.DefaultView;
             datagrid.Columns[0].Header = "ID";
             datagrid.Columns[1].Header = "Статус";
-            datagrid.Columns[2].Header = "Дата начала";
-            datagrid.Columns[3].Header = "Услуга";
-            datagrid.Columns[4].Header = "Выделено";
-            datagrid.Columns[5].Header = "Израсходовано";
-            datagrid.Columns[6].Header = "Осталось";
+            datagrid.Columns[2].Header = "Пункт";
+            datagrid.Columns[3].Header = "Дата начала";
+            datagrid.Columns[4].Header = "Услуга";
+            datagrid.Columns[5].Header = "Выделено";
+            datagrid.Columns[6].Header = "Израсходовано";
+            datagrid.Columns[7].Header = "Осталось";
         }
 
         private void buttonsbros_Click(object sender, RoutedEventArgs e)
@@ -285,11 +329,12 @@ namespace UIKitTutorials.Pages
             LoadGrid();
             datagrid.Columns[0].Header = "ID";
             datagrid.Columns[1].Header = "Статус";
-            datagrid.Columns[2].Header = "Дата начала";
-            datagrid.Columns[3].Header = "Услуга";
-            datagrid.Columns[4].Header = "Выделено";
-            datagrid.Columns[5].Header = "Израсходовано";
-            datagrid.Columns[6].Header = "Осталось";
+            datagrid.Columns[2].Header = "Пункт";
+            datagrid.Columns[3].Header = "Дата начала";
+            datagrid.Columns[4].Header = "Услуга";
+            datagrid.Columns[5].Header = "Выделено";
+            datagrid.Columns[6].Header = "Израсходовано";
+            datagrid.Columns[7].Header = "Осталось";
             textboxstatuspoisk.Text = "";
         }
 
@@ -378,17 +423,19 @@ namespace UIKitTutorials.Pages
                    
                     textboxuslug.Text = "";
                     textboxvid.Text = "";
+                    textboxpunkt.Text = "";
                     textboxost.Text = "";
                     textboxrashod.Text = "0";
                     textboxid.Clear();
                     datagrid.SelectedIndex = -1;
                     datagrid.Columns[0].Header = "ID";
                     datagrid.Columns[1].Header = "Статус";
-                    datagrid.Columns[2].Header = "Дата начала";
-                    datagrid.Columns[3].Header = "Услуга";
-                    datagrid.Columns[4].Header = "Выделено";
-                    datagrid.Columns[5].Header = "Израсходовано";
-                    datagrid.Columns[6].Header = "Осталось";
+                    datagrid.Columns[2].Header = "Пункт";
+                    datagrid.Columns[3].Header = "Дата начала";
+                    datagrid.Columns[4].Header = "Услуга";
+                    datagrid.Columns[5].Header = "Выделено";
+                    datagrid.Columns[6].Header = "Израсходовано";
+                    datagrid.Columns[7].Header = "Осталось";
                 }
                 catch (SqlException ex)
                 {

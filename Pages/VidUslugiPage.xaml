@@ -22,7 +22,7 @@
 
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0"  Grid.ColumnSpan="2">
-                <TextBlock Visibility="Visible" Foreground="Black" Margin="800,-65,0,0" x:Name="labelid"  FontSize="18" Height="30" Width="64"/>
+                <TextBlock Visibility="Hidden" Foreground="Black" Margin="800,-65,0,0" x:Name="labelid"  FontSize="18" Height="30" Width="64"/>
 
             </StackPanel>
 

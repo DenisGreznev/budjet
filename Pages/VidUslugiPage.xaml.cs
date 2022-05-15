@@ -164,7 +164,7 @@ namespace UIKitTutorials.Pages
                 try
                 {
                     SqlConnection sqlCon = LocalDB.GetDBConnection();
-                    SqlCommand cmd = new SqlCommand("UPDATE viduslugi SET id_uslugi='" + labelid.Text + "', datav='" + textboxdate.Text + "', summa='" + textboxsum.Text + "' WHERE id_vidusl=" + id + ";", sqlCon);
+                    SqlCommand cmd = new SqlCommand("UPDATE viduslug SET id_uslugi='" + labelid.Text + "', datav='" + textboxdate.Text + "', summa='" + textboxsum.Text + "' WHERE id_vidusl=" + id + ";", sqlCon);
                     sqlCon.Open();
                     cmd.ExecuteNonQuery();
 

@@ -27,7 +27,7 @@
                     </Grid.RowDefinitions>
 
                     <!-- Logo -->
-                    
+
 
                     <!-- Menu -->
                     <ToggleButton x:Name="btnMenu"  HorizontalAlignment="Right" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Style="{StaticResource MenuIconStyle}" Margin="0 0 15 0">
@@ -62,7 +62,7 @@
                         <RadioButton x:Name="rdPunkt" FontSize="18" Content="Пункты" Style="{DynamicResource MenuRadioButtonStyle}" Tag="{DynamicResource supplier}" Margin="0 5 0 5" Click="rdPunkt_Click"/>
                     </StackPanel>
 
-                    
+
                 </Grid>
             </Border>
             <!-- End: GridColum Left-->
@@ -73,6 +73,14 @@
                     <RowDefinition Height="60"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
+
+                <Border Grid.Row="0"  Margin="0,5,123,0" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                    <StackPanel HorizontalAlignment="Center" Grid.Row="0" Width="979">
+                        <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Margin="0,10,0,0" Text="Освоение бюджетных средств" FontWeight="Bold" FontSize="23" Height="42" Width="967"/>
+                    </StackPanel>
+                </Border>
+
+
 
                 <!-- Start: Button Close | Restore | Minimize -->
                 <StackPanel Grid.Row="0" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,10,0" Height="30" Orientation="Horizontal" FlowDirection="RightToLeft">
@@ -92,6 +100,8 @@
                     <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
                 </StackPanel>
                 <!-- End: Button Close | Restore | Minimize -->
+
+
 
                 <Border Grid.Row="1" Margin="10">
                     <Frame x:Name="PagesNavigation" NavigationUIVisibility="Hidden">
